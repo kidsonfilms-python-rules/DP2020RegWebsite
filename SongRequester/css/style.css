@@ -1,0 +1,204 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1D1E28 !important;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-size: 16px; 
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #14141b;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(51, 51, 51);
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+h1 {
+    color: #ffffff;
+}
+
+p {
+    color: #ffffff;
+}
+
+.startcenter {
+    /* background-color: aquamarine; */
+    text-align: center;
+    padding: 40vh;
+}
+
+.post {
+    border-color: #f44336 !important;
+    color: red !important;
+    background-color: transparent;
+}
+
+.post:hover {
+    background: #f44336;
+    color: white;
+}
+
+.postcenter {
+    margin: auto;
+  /* border: 3px solid green; */
+  padding: 250px;
+  width: 100vw;
+  height: 100vh;
+
+}
+
+.postcard {
+    background-color: rgb(41, 41, 41);
+    text-align: center;
+    align-self: center;
+    border-radius: 15px;
+    padding: 50px;
+}
+.postcard input {
+    width: 70%;
+    background-color: rgb(51, 51, 51);
+    border-style: solid;
+    border-radius: 50px;
+    color: white;
+}
+
+.postcard input[type=text]:focus {
+    outline: none;
+}
+
+.postcard input[type=text] {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.postcard button[type=submit] {
+    background-color: #202020;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.postcard button[type=submit]:hover {
+    background-color: #242424;
+}
+
+.postcard button[type=submit]:focus {
+    outline: none;
+}
+
+.nav-link {
+    font-size: 14px !important;
+    background: transparent !important;
+    font-family: Lato, sans-serif !important;
+    text-transform: capitalize !important;
+}
+
+.nav-link:hover {
+    background: transparent !important;
+    color: #AD91FF !important;
+    font-weight: bold !important;
+}
+
+.login-btn {
+    border: 2px solid #AD91FF !important;
+    font-size: 10px !important;
+}
+
+.login-btn:hover {
+    background: #AD91FF !important;
+}
+
+.navbar {
+    box-shadow: none !important;
+    background-color: #202020;
+    z-index: 100;
+}
+
+.navbar-brand {
+    font-size: 25px !important
+}
+
+.navbar-toggler-icon {
+    color: #fff !important
+}
+
+.homecard {
+    /* background-color: #AD91FF; */
+    text-align: center;
+    width: 80vw;
+    margin-left: 10vw;
+    /* padding: 10px; */
+    border-radius: 10px;
+}
+.row {
+    width: 81vw;
+    /* background-color: #f44336; */
+    border-radius: 10px;
+}
+
+.votediv {
+    background-color: #18181a;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    /* padding: 10px; */
+    width: 4%;
+}
+
+.homecardbody {
+    background-color:#1A1A1B;
+    width: 96%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+}
+
+.homecardbody p {
+    color: #fff;
+}
+
+.homecardbody h3{
+    color: #fff;
+}
+
+.vote {
+    display: inline-block;
+    overflow: hidden;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    fill: gray;
+    /* background: url('https://raw.githubusercontent.com/reddit-archive/art-gallery/9d83e47dcc7d619ed1b1671ddd7e246f19d6ec39/assets/svg/downvote.svg'); */
+    /* background-position: 0 -25px; */
+} 
+  
+  
+.vote.on {
+    background-position: 0 2px;
+}
+
+.voteActive svg {
+    fill: #f44336;
+}

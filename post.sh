@@ -1,3 +1,4 @@
+# This is test script, NOT to be used in production
 curl -X POST \
 -H "Content-Type: application/json" \
 -d'{

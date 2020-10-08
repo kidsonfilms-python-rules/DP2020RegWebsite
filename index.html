@@ -1,4 +1,4 @@
-<html>
+<!-- <html> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <meta name="color-scheme" content="dark">
@@ -10,6 +10,7 @@
 body {
   background-color: #131313;
   color: white;
+  overflow-y: hidden;
 }
 
 #regForm {
@@ -20,6 +21,12 @@ body {
   width: 70%;
   min-width: 300px;
   border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#regForm:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 h1 {
@@ -47,7 +54,7 @@ input.invalid {
 }
 
 button {
-  background-color: #d35232;
+  background-color: #bd4c30;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -55,6 +62,7 @@ button {
   font-family: Raleway;
   cursor: pointer;
   border-radius: 10px;
+  outline: none;
 }
 
 button:hover {
@@ -62,7 +70,8 @@ button:hover {
 }
 
 #prevBtn {
-  background-color: #bbbbbb;
+  background-color: #666666;
+  outline: none;
 }
 
 /* Make circles that indicate the steps of the form: */
@@ -88,12 +97,12 @@ button:hover {
 </style>
 <body>
 
-<form id="regForm" action="/thankyou.html" method="POST">
+<form id="regForm" action="thankyou.html">
   <h1>Register For Utsav Drive-By Puja and Bhog</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
     <!--<p></p> -->
-    <p>Click Next to Continue</p>
+    <p><b>Click Next To Continue.</b></p>
   </div>
   <div class="tab">
     <zero-md src="covidrelease.md" id="md"> <template>
@@ -196,22 +205,22 @@ button:hover {
   <div class="tab"><br><br>
     Please enter the following details:
     <p><input placeholder="Email" oninput="this.className = ''" name="Email" type="text" id="email"></p>
-    <p><input placeholder="Zip Code" oninput="this.className = ''" name="zip code" type="text" id="zipcode"></p>
-    <p><input placeholder="Number of People in Your Party (1-5)" oninput="this.className = ''" name="number" type="text" id="members"></p>
+    <p><input placeholder="Zip Code" oninput="this.className = ''" name="zipcode" type="text" id="zipcode"></p>
+    <p><input placeholder="Number of People in Your Party (1-5)" oninput="this.className = ''" name="members" type="text" id="members"></p>
     <br>
     I am interested in (please check) <br><br>
     <label class="container">Drive-by Puja
-      <input class="checkbox" type="checkbox" id="driveby_select">
+      <input class="checkbox" type="checkbox" id="driveby_select" name="driveby">
       <span class="checkmark"></span>
     </label>
     <br><br>
     <label class="container">Prasad Pickup
-      <input class="checkbox" type="checkbox" id="prasad_select">
+      <input class="checkbox" type="checkbox" id="prasad_select" name="prasad">
       <span class="checkmark"></span>
     </label>
     <br><br>
     <label class="container">Bhog Delivery
-      <input class="checkbox" type="checkbox" id="bhog_select">
+      <input class="checkbox" type="checkbox" id="bhog_select" name="bhog">
       <span class="checkmark"></span>
     </label>
     <!-- <p><input placeholder="" oninput="this.className = ''" name="nn"></p>
@@ -232,6 +241,7 @@ button:hover {
   </div>
 </form>
 
+<script src="js/app.js"></script>
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
@@ -248,8 +258,10 @@ function showTab(n) {
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
+    document.getElementById("nextBtn").classList.add('submit');
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
+    document.getElementById("nextBtn").classList.remove('submit');
   }
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
@@ -312,28 +324,11 @@ function fixStepIndicator(n) {
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAfXLxZRkJ-rB00Z9TCrBRdJizZ6AQriH4",
-    authDomain: "project-delta-db6b3.firebaseapp.com",
-    databaseURL: "https://project-delta-db6b3.firebaseio.com",
-    projectId: "project-delta-db6b3",
-    storageBucket: "project-delta-db6b3.appspot.com",
-    messagingSenderId: "75366675254",
-    appId: "1:75366675254:web:00dd0096bf727116f4f997",
-    measurementId: "G-E3W1HD8QVJ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2.2.10/webcomponents-loader.min.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
-<script src="js/app.js"></script>
+
 
 
 </body>
-</html>
+<!-- </html> -->

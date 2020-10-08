@@ -73,42 +73,78 @@
 
 
 
+// function post(name, zipcode, email, driveby, prasad, bhog, members) {
+//   const http = new XMLHttpRequest();
+//   const url = 'https://firestore.googleapis.com/v1/projects/project-delta-db6b3/databases/(default)/documents/bhogReg'
+//   http.open("POST", url, true);
+//   http.setRequestHeader('Content-type', 'application/json');
+  
+//   http.send(
+//     `{
+//       "fields": {
+//       "name": {
+//       "stringValue": "${name}"
+//       },
+//       "zipcode": {
+//       "stringValue": "${zipcode}"
+//       },
+//       "email": {
+//       "stringValue": "${email}"
+//       },
+//       "driveby": {
+//         "booleanValue": ${driveby}
+//       },
+//       "prasad": {
+//         "booleanValue": ${prasad}
+//       },
+//       "bhog": {
+//         "booleanValue": ${bhog}
+//       },
+//       "members": {
+//         "stringValue": "${members}"
+//       }
+//       }
+//       }`
+//   );
+
+//   http.onreadystatechange = (e) => {
+//     console.log(http.responseText)
+//   }
+// }
+
 function post(name, zipcode, email, driveby, prasad, bhog, members) {
   const http = new XMLHttpRequest();
-  const url = 'https://firestore.googleapis.com/v1/projects/project-delta-db6b3/databases/(default)/documents/bhogReg'
+  const url = 'https://us-central1-project-delta-db6b3.cloudfunctions.net/postRegDetails'
   http.open("POST", url, true);
   http.setRequestHeader('Content-type', 'application/json');
+  //http.setRequestHeader('Access-Control-Allow-Methods', 'POST');
+  //http.setRequestHeader('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  //http.setRequestHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   
+  // http.send(
+  //   `{
+  //     "name": "${name}",
+  //     "zipcode": "${zipcode}",
+  //     "email": "${email}",
+  //     "driveby": "${driveby}",
+  //     "prasad": "${prasad}",
+  //     "bhog": "${bhog}",
+  //     "members": "${members}"
+  //     }`
+  // );
   http.send(
     `{
-      "fields": {
-      "name": {
-      "stringValue": "${name}"
-      },
-      "zipcode": {
-      "stringValue": "${zipcode}"
-      },
-      "email": {
-      "stringValue": "${email}"
-      },
-      "driveby": {
-        "booleanValue": ${driveby}
-      },
-      "prasad": {
-        "booleanValue": ${prasad}
-      },
-      "bhog": {
-        "booleanValue": ${bhog}
-      },
-      "members": {
-        "stringValue": "${members}"
-      }
-      }
+      "name": "${name}",
+      "zipcode": "${zipcode}",
+      "email": "${email}",
+      "driveby": "${driveby}",
+      "prasad": "${prasad}",
+      "bhog": "${bhog}",
+      "members": "${members}"
       }`
   );
-
   http.onreadystatechange = (e) => {
-    console.log(http.responseText)
+    console.log(http.responseText + e)
   }
 }
 
@@ -122,4 +158,14 @@ function pass() {
   bhog = document.getElementById("bhog_select").checked;
   console.log(email + ' ' + name + ' ' + zipcode);
   post(name, zipcode, email, driveby, prasad, bhog, members)
+  return true;
+
 }
+
+
+submitBtn = document.getElementById('nextBtn')
+// submitBtn.addEventListener('click', () => {
+//   if (!(submitBtn.innerHtml == 'Submit')) return false
+//   console.log('Passing...')
+//   pass()
+// })

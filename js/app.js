@@ -112,7 +112,7 @@
 //   }
 // }
 
-function post(name, zipcode, email, driveby, prasad, bhog, members) {
+function post(name, zipcode, email, guests, members) {
   const http = new XMLHttpRequest();
   const url = 'https://us-central1-project-delta-db6b3.cloudfunctions.net/postRegDetails'
   http.open("POST", url, true);
@@ -137,9 +137,7 @@ function post(name, zipcode, email, driveby, prasad, bhog, members) {
       "name": "${name}",
       "zipcode": "${zipcode}",
       "email": "${email}",
-      "driveby": "${driveby}",
-      "prasad": "${prasad}",
-      "bhog": "${bhog}",
+      "guests": "${guests}",
       "members": "${members}"
       }`
   );
@@ -153,11 +151,9 @@ function pass() {
   email = document.getElementById("email").value;
   zipcode = document.getElementById("zipcode").value;
   members = document.getElementById("members").value;
-  driveby = document.getElementById("driveby_select").checked;
-  prasad = document.getElementById("prasad_select").checked;
-  bhog = document.getElementById("bhog_select").checked;
+  guests = document.getElementById("guests").value;
   console.log(email + ' ' + name + ' ' + zipcode);
-  post(name, zipcode, email, driveby, prasad, bhog, members)
+  post(name, zipcode, email, guests, members)
   return true;
 
 }

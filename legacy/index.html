@@ -1,4 +1,3 @@
-<!-- <html> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <link rel="shortcut icon" href="favicon.png" type="image/png">
@@ -117,149 +116,34 @@ button:hover {
 .step.finish {
   background-color: #4CAF50;
 }
+
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: solid;
+}
 </style>
 <body>
 
 <form id="regForm" action="thankyou.html">
-  <h1>Register For Utsav Drive-By Durga Puja Services</h1>
+  <h1>Registration for 2020 Durga Puja Services is Closed</h1>
   <!-- One "tab" for each step in the form: -->
   <div class="tab">
     <!--<p></p> -->
-    <p> <br> Date of Service: <span style="color: rgb(243, 154, 122);">October 24, 2020.</span> <br> <br>Venue: <span style="color:  rgb(243, 154, 122) ;">Sri Siddhi Vinayaka Temple, 4679 Aldona Ln, Sacramento, CA 95841</span>  <br> <br> <br> <b> Click Next To Continue.</b></p>
+    <!-- <p> <br> Date of Service: <span style="color: rgb(243, 154, 122);">October 24, 2020.</span> <br> <br>Venue: <span style="color:  rgb(243, 154, 122) ;">Sri Siddhi Vinayaka Temple, 4679 Aldona Ln, Sacramento, CA 95841</span>  <br> <br> <br> <b> Click Next To Continue.</b></p> -->
+    <p>If you have already registered, and would like to cancel/change, please send email to <a href="mailto:utsavpr@gmail.com">utsavpr@gmail.com</a></p>
   </div>
-  <div class="tab">
-    <zero-md src="covidrelease.md" id="md"> <template>
-        <!-- Wrap your own CSS styles inside a `<style>` tag -->
-        <style>
-            /* My own markdown styles */
-            h1 {
-                font-size: 34px;
-                color: white;
-            }
-
-            p {
-                color: white;
-                /* font-size: 14; */
-            }
-
-            /* My own highlight styles */
-            code {
-                background-color: #1b1d23;
-                color: #af6161;
-            }
-
-            h2 {
-                color: white;
-
-            }
-
-            h1 {
-                border-color: #555;
-            }
-
-            h2 {
-                border-color: #555;
-            }
-
-            hr {
-                background-color: #555;
-            }
-
-            blockquote {
-                border-color: #181a1f;
-            }
-
-            img {
-                background-color: transparent;
-            }
-
-            code,
-            tt {
-                background-color: #1b1d23;
-                color: #e83e8c;
-            }
-
-            .highlight pre,
-            pre {
-                background-color: #1b1d23;
-                padding: 10px;
-                border-radius: 10px;
-            }
-
-            pre code {
-                color: rgb(157, 165, 180);
-            }
-
-            table tr {
-                background-color: #222222;
-                border-color: #181a1f;
-            }
-
-            table :nth-child(2n) {
-                background-color: #090705;
-                border-color: #181a1f;
-            }
-
-            table td th {
-                border-color: #181a1f;
-            }
-
-            h3 {
-                color: white;
-            }
-
-            a {
-                color: rgb(202, 202, 202);
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: white;
-            }
-
-            li {
-                color: white;
-            }
-
-        </style>
-    </template></zero-md>
-    <p><input placeholder="Full Legal Name..." oninput="this.className = ''" name="name" type="text" id="fullname"></p>
-  </div>
-  <div class="tab"><br><br>
-    Please enter the following details:
-    <p><input placeholder="Email" oninput="this.className = ''" name="Email" type="text" id="email"></p>
-    <p><input placeholder="Zip Code" oninput="this.className = ''" name="zipcode" type="text" id="zipcode"></p>
-    <p><input placeholder="Number of People in Your Party (1-5)" oninput="this.className = ''" name="members" type="text" id="members"></p>
-    <br>
-    I am interested in (please check) <br><br>
-    <label class="container">Drive-by Puja
-      <input class="checkbox" type="checkbox" id="driveby_select" name="driveby">
-      <span class="checkmark"></span>
-    </label>
-    <br><br>
-    <label class="container">Prasad Pickup
-      <input class="checkbox" type="checkbox" id="prasad_select" name="prasad">
-      <span class="checkmark"></span>
-    </label>
-    <br><br>
-    <label class="container">Bhog Pickup
-      <input class="checkbox" type="checkbox" id="bhog_select" name="bhog">
-      <span class="checkmark"></span>
-    </label>
-    <!-- <p><input placeholder="" oninput="this.className = ''" name="nn"></p>
-    <p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p> -->
-  </div>
-  <div style="overflow:auto;">
+  
     <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+      <!-- <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button> -->
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
   <div style="text-align:center;margin-top:40px;">
+    <!-- <span class="step"></span>
     <span class="step"></span>
-    <span class="step"></span>
-    <span class="step"></span>
+    <span class="step"></span> -->
     <!-- <span class="step"></span> -->
   </div>
 </form>
@@ -354,4 +238,3 @@ function fixStepIndicator(n) {
 
 
 </body>
-<!-- </html> -->

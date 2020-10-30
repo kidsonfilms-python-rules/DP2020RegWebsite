@@ -139,7 +139,7 @@ function post(name, zipcode, email, guests, members, menu) {
       "email": "${email}",
       "guests": "${guests}",
       "members": "${members}",
-      "menu": "${menu}",
+      "menu": "${menu}"
      }`
   );
   http.onreadystatechange = (e) => {

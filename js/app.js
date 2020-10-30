@@ -112,7 +112,7 @@
 //   }
 // }
 
-function post(name, zipcode, email, guests, members) {
+function post(name, zipcode, email, guests, members, menu) {
   const http = new XMLHttpRequest();
   const url = 'https://us-central1-project-delta-db6b3.cloudfunctions.net/postRegDetails'
   http.open("POST", url, true);
@@ -138,8 +138,9 @@ function post(name, zipcode, email, guests, members) {
       "zipcode": "${zipcode}",
       "email": "${email}",
       "guests": "${guests}",
-      "members": "${members}"
-      }`
+      "members": "${members}",
+      "menu": "${menu}",
+     }`
   );
   http.onreadystatechange = (e) => {
     console.log(http.responseText + e)
